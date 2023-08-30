@@ -1,44 +1,78 @@
-
-    <h1>Computer Knowledge Test</h1>
-    <div id="timer">30:00</div>
-    <form id="testForm" action="submit.html" method="post">
-        <div id="question"></div>
-        <input type="radio" id="option1" name="answer">
-        <label for="option1" id="label1"></label><br>
-        <input type="radio" id="option2" name="answer">
-        <label for="option2" id="label2"></label><br>
-        <input type="radio" id="option3" name="answer">
-        <label for="option3" id="label3"></label><br>
-        <input type="submit" value="Submit Answer">
-    </form>
+    <!-- Header of the page -->
+    <header>
+        <h1>Computer Knowledge Test</h1>
+        <h2>Anne Arundel Community College</h2>
+        <!-- Timer for the test -->
+        <div id="clock">30:00</div>
+    </header>
+    <!-- Main content of the page -->
+    <main>
+        <!-- Form for the test -->
+        <form id="loginForm" action="submit.html" method="post">
+            <!-- Question will be displayed here -->
+            <div id="question"></div>
+            <!-- Radio button for first option -->
+            <input type="radio" id="option1" name="answer">
+            <!-- Label for first option -->
+            <label for="option1" id="label1"></label><br>
+            <!-- Radio button for second option -->
+            <input type="radio" id="option2" name="answer">
+            <!-- Label for second option -->
+            <label for="option2" id="label2"></label><br>
+            <!-- Radio button for third option -->
+            <input type="radio" id="option3" name="answer">
+            <!-- Label for third option -->
+            <label for="option3" id="label3"></label><br>
+            <!-- Submit button for the form -->
+            <input type="submit" value="Submit Answer">
+        </form>
+    </main>
+    <!-- JavaScript code starts here -->
     <script>
-        // Add your JavaScript here
-        // Test script
+        // Array to store the questions
         var questions = [
             // Add questions here
         ];
+        // Variable to keep track of current question
         var currentQuestion = 0;
+        // Function to be executed when the window loads
         window.onload = function() {
+            // Display the first question
             displayQuestion();
+            // Start the timer
             startTimer();
         };
+        // Function to display the current question
         function displayQuestion() {
+            // Get the current question
             var question = questions[currentQuestion];
+            // Display the question and options
             document.getElementById('question').innerText = question.question;
             document.getElementById('label1').innerText = question.options[0];
             document.getElementById('label2').innerText = question.options[1];
             document.getElementById('label3').innerText = question.options[2];
         }
+        // Function to start the timer
         function startTimer() {
+            // Get the timer element
             var timer = document.getElementById('timer');
+            // Set the initial time
             var time = 30 * 60;
+            // Update the timer every second
             setInterval(function() {
+                // Decrease the time
                 time--;
+                // Calculate minutes and seconds
                 var minutes = Math.floor(time / 60);
                 var seconds = time % 60;
+                // Display the time
                 timer.innerText = minutes + ':' + (seconds < 10 ? '0' : '') + seconds;
             }, 1000);
         }
     </script>
-
-
+    <!-- JavaScript code ends here -->
+    <!-- Footer of the page -->
+    <footer>
+        <h2>About the Computer Science Department</h2>
+        <p>Anne Arundel Community College’s Department of Computer Science offers three degrees with several specialization options, as well as several certificates. The department provides a foundation in computer science and mathematics. Students learn how to use the latest and greatest software development languages to make computers do amazing things. There is also lots of hands-on lab work for students to test out their skills. The department’s graduates are competent in their discipline, particularly in the areas of problem-solving, technical competency, and software development. The department has dedicated and enthusiastic instructors who work with small classes in a laboratory setting. Students receive individual attention and participate in hands-on learning. The department also offers resources for students such as Open Lab, Computer Science Club, Cyber Defense Club, Internships, and Job Search Assistance.</p>
+    </footer>

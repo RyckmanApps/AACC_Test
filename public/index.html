@@ -3,14 +3,8 @@
 <head>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Computer Knowledge Test - Anne Arundel Community College</title>
-    <style>
-        /* Add your CSS here */
-        /* Clock widget CSS */
-        #clock {
-            font-size: 2em;
-            color: #333;
-        }
-    </style>
+    <link rel="stylesheet" type="text/css" href="css/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <script>
         // Add your JavaScript here
         // Clock widget script
@@ -24,20 +18,31 @@
     </script>
 </head>
 <body>
-    <h1>Welcome to the Computer Knowledge Test</h1>
-    <h2>Anne Arundel Community College</h2>
-    <div id="clock"></div>
-    <p>Please log in to take the test.</p>
-    <form id="loginForm" action="test.html" method="get">
-        <label for="username">Username:</label><br>
-        <input type="text" id="username" name="username"><br>
-        <label for="password">Password:</label><br>
-        <input type="password" id="password" name="password"><br>
-        <input type="submit" value="Log in">
-    </form>
-    <div id="testContainer" style="display: none;">
-        <!-- Test questions will be populated here -->
-    </div>
+    <header>
+        <h1>Welcome to the Computer Knowledge Test</h1>
+        <h2>Anne Arundel Community College</h2>
+        <div id="clock"></div>
+    </header>
+    <main>
+        <section id="loginSection">
+            <p>Please log in to take the test.</p>
+            <form id="loginForm" action="test.html" method="get">
+                <!-- note this login section is non-functional. Simply clicking login will advance you to the test.html page-->
+                <label for="username">Username:</label><br>
+                <input type="text" id="username" name="username"><br>
+                <label for="password">Password:</label><br>
+                <input type="password" id="password" name="password"><br>
+                <input type="submit" value="Log in">
+            </form>
+        </section>
+        <section id="testContainer" style="display: none;">
+            <!-- Test questions will be populated here -->
+        </section>
+    </main>
+    <footer>
+        <a href="https://www.aacc.edu/" target="_blank"><i class="fa fa-globe" aria-hidden="true"></i> Anne Arundel Community College</a>
+        <a href="https://www.facebook.com/AnneArundelCommunityCollege" target="_blank"><i class="fa fa-facebook" aria-hidden="true"></i> Facebook</a>
+    </footer>
     <script src="testScript.js"></script>
 </body>
 </html>

@@ -1,0 +1,96 @@
+```css
+/* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    color: #333;
+    background-color: #f4f4f4;
+}
+
+/* Header Styles */
+h1, h2 {
+    color: #E36414; /* School color - Orange */
+}
+
+/* Clock Widget Styles */
+#clock {
+    font-size: 2em;
+    color: #2A9D8F; /* School color - Green */
+}
+
+/* Login Form Styles */
+#loginForm {
+    width: 300px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 5px;
+    box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.1);
+}
+
+#loginForm label {
+    display: block;
+    margin-bottom: 10px;
+}
+
+#loginForm input[type="text"], #loginForm input[type="password"] {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border-radius: 5px;
+    border: 1px solid #ddd;
+}
+
+#loginForm input[type="submit"] {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    background-color: #E36414; /* School color - Orange */
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+#loginForm input[type="submit"]:hover {
+    background-color: #2A9D8F; /* School color - Green */
+}
+
+/* Test Page Styles */
+#timer {
+    font-size: 2em;
+    color: #E36414; /* School color - Orange */
+}
+
+#testForm {
+    width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 5px;
+    box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.1);
+}
+
+#testForm label {
+    display: block;
+    margin-bottom: 10px;
+}
+
+#testForm input[type="radio"] {
+    margin-right: 10px;
+}
+
+#testForm input[type="submit"] {
+    display: block;
+    width: 200px;
+    margin: 20px auto;
+    padding: 10px;
+    background-color: #E36414; /* School color - Orange */
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+#testForm input[type="submit"]:hover {
+    background-color: #2A9D8F; /* School color - Green */
+}
