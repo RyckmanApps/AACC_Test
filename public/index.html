@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Computer Knowledge Test - Anne Arundel Community College</title>
+    <style>
+        /* Add your CSS here */
+        /* Clock widget CSS */
+        #clock {
+            font-size: 2em;
+            color: #333;
+        }
+    </style>
+    <script>
+        // Add your JavaScript here
+        // Clock widget script
+        window.onload = function() {
+            setInterval(function() {
+                var now = new Date();
+                var clock = document.getElementById('clock');
+                clock.innerHTML = now.toLocaleTimeString();
+            }, 1000);
+        };
+    </script>
+</head>
+<body>
+    <h1>Welcome to the Computer Knowledge Test</h1>
+    <h2>Anne Arundel Community College</h2>
+    <div id="clock"></div>
+    <p>Please log in to take the test.</p>
+    <form id="loginForm" action="test.html" method="get">
+        <label for="username">Username:</label><br>
+        <input type="text" id="username" name="username"><br>
+        <label for="password">Password:</label><br>
+        <input type="password" id="password" name="password"><br>
+        <input type="submit" value="Log in">
+    </form>
+    <div id="testContainer" style="display: none;">
+        <!-- Test questions will be populated here -->
+    </div>
+    <script src="testScript.js"></script>
+</body>
+</html>

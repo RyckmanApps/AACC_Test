@@ -1,0 +1,44 @@
+
+    <h1>Computer Knowledge Test</h1>
+    <div id="timer">30:00</div>
+    <form id="testForm" action="submit.html" method="post">
+        <div id="question"></div>
+        <input type="radio" id="option1" name="answer">
+        <label for="option1" id="label1"></label><br>
+        <input type="radio" id="option2" name="answer">
+        <label for="option2" id="label2"></label><br>
+        <input type="radio" id="option3" name="answer">
+        <label for="option3" id="label3"></label><br>
+        <input type="submit" value="Submit Answer">
+    </form>
+    <script>
+        // Add your JavaScript here
+        // Test script
+        var questions = [
+            // Add questions here
+        ];
+        var currentQuestion = 0;
+        window.onload = function() {
+            displayQuestion();
+            startTimer();
+        };
+        function displayQuestion() {
+            var question = questions[currentQuestion];
+            document.getElementById('question').innerText = question.question;
+            document.getElementById('label1').innerText = question.options[0];
+            document.getElementById('label2').innerText = question.options[1];
+            document.getElementById('label3').innerText = question.options[2];
+        }
+        function startTimer() {
+            var timer = document.getElementById('timer');
+            var time = 30 * 60;
+            setInterval(function() {
+                time--;
+                var minutes = Math.floor(time / 60);
+                var seconds = time % 60;
+                timer.innerText = minutes + ':' + (seconds < 10 ? '0' : '') + seconds;
+            }, 1000);
+        }
+    </script>
+
+
